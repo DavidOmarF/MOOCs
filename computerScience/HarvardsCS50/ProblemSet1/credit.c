@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <math.h>
 
-void CardNumberToString(long long cardNumber, int* numbers, int exponent);
-int CardSum(int* numbers, int exponent);
+void CardNumberToString(long long cardNumber, int* numbers, int numDigits);
+int CardSum(int* numbers, int numDigits);
 void CardProvider(int first, int second);
 int FindNumDigits(long long lowerBound, long long cardNumber);
 
@@ -54,18 +54,18 @@ void CardProvider(int first, int second){
 }
 
 
-void CardNumberToString(long long cardNumber, int* numeros, int exponent){
+void CardNumberToString(long long cardNumber, int* numbers, int numDigits){
     
     long long base = 1;
     long long restante = 0;
     
-    for (int j = 0; j < exponent; base *= 10, j++){
+    for (int j = 0; j < numDigits; base *= 10, j++){
         
         for (int i = 0; i <= 9; i++){
             
             if ((cardNumber - i * base) % (base * 10) == restante){
-                numeros[j] = i;
-                restante += numeros[j] * base;
+                numbers[j] = i;
+                restante += numbers[j] * base;
             }
             
         }
@@ -74,23 +74,23 @@ void CardNumberToString(long long cardNumber, int* numeros, int exponent){
 }
 
 
-int CardSum(int* numeros, int exponente){
+int CardSum(int* numbers, int numDigits){
     int lastSum = 0;
     
-    for (int i = 1; i < exponente; i += 2){
+    for (int i = 1; i < numDigits; i += 2){
         
-        if(numeros[i] < 5) {
-            lastSum += numeros[i] * 2;            
+        if(numbers[i] < 5) {
+            lastSum += numbers[i] * 2;            
         } 
         
         else {
-            lastSum += 1 + (numeros[i] * 2 % 10);
+            lastSum += 1 + (numbers[i] * 2 % 10);
         }
         
     }
     
-    for(int i = 0; i < exponente; i += 2){
-        lastSum += numeros[i];
+    for(int i = 0; i < numDigits; i += 2){
+        lastSum += numbers[i];
     }
     
     return lastSum;
@@ -99,12 +99,12 @@ int CardSum(int* numeros, int exponente){
 
 int FindNumDigits(long long lowerBound, long long cardNumber){
     
-    int exponent = 13;
-    for (; exponent < 16; lowerBound *= 10, exponent++){
+    int numDigits = 13;
+    for (; numDigits < 16; lowerBound *= 10, numDigits++){
         if(cardNumber % lowerBound == cardNumber){
             break;
         }
     }    
     
-    return exponent;
+    return numDigits;
 }
