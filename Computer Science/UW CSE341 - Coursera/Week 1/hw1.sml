@@ -112,19 +112,3 @@ fun oldest (dates : (int*int*int) list) =
             then SOME (hd dates) (*return SOME head of dates*)
             else tl_oldest (* return tl_oldest *)
         end
-
-
-(*
-
-===== PENDING ======
-Challenge Problem: Write functions number_in_months_challenge and dates_in_months_challenge
-that are like your solutions to problems 3 and 5 except having a month in the second argument multiple
-times has no more effect than having it once. (Hint: Remove duplicates, then use previous work.)
-13. 
-
-Challenge Problem: Write a function reasonable_date that takes a date and determines if it
-describes a real date in the common era. A “real date” has a positive year (year 0 did not exist), a
-month between 1 and 12, and a day appropriate for the month. Solutions should properly handle leap
-years. Leap years are years that are either divisible by 400 or divisible by 4 but not divisible by 100.
-(Do not worry about days possibly lost in the conversion to the Gregorian calendar in the Late 1500s.)
-*)
