@@ -1,2 +1,4 @@
 # MOOCs
-Online courses practices, assessments and projects.
+
+# CS50x: Introduction to Computer Science 
+## HarvardX at edX
