@@ -2,7 +2,7 @@
 # Computer Science Courses
 
 
-### [CS50x: Introduction to Computer Science](/CS50_Harvard)
+### [CS50x: Introduction to Computer Science](/Computer_Science/CS50_Harvard)
 
 **This is an introductory course to CS offered by Harvard.** 
 
@@ -32,7 +32,7 @@ Between all courses, this one has the biggest community. Everytime you have trou
 
 ----------
 
-### [6.00.1x: Introduction to Computer Science and Programming Using Python](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11)
+### [6.00.1x: Introduction to Computer Science and Programming Using Python](/Computer_Science/6.00_MIT)
 
 **Another introductory course to CS, offered by MIT.**
 
@@ -61,7 +61,7 @@ MIT 6.00.1 is the first of a two-course sequence: Introduction to Computer Scien
 
 ----------
 
-### [CS101: Intro to Computer Science]
+### [CS101: Intro to Computer Science](/Computer_Science/CS101_Udacity)
 
 **This is an(other) introductory course to CS, offered by Udacity.** 
 
