@@ -20,14 +20,13 @@ def fib(number, computed_fib=None):
 
     # It's a new number for fibonacci sequence, so we have to
     # actually calculate it
-    else:
-        ans = fib(number - 1, computed_fib) + fib(number - 2, computed_fib)
-        computed_fib[number] = ans
-        return ans
+    nth_fib = fib(number - 1, computed_fib) + fib(number - 2, computed_fib)
+    computed_fib[number] = nth_fib
+    return nth_fib
 
 
 print(fib(6))
-# 13
+# 8
 print(fib(20))
 # 6765
 print(fib(100))
