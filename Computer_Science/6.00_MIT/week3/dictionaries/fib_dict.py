@@ -8,6 +8,11 @@ def fib(number, computed_fib=None):
         number: int, nth fibonacci number to be computed
         computed_fib: dict, contains memoization for previously computed fib numbers
     '''
+    ## For benchmark purposes:
+    global calls
+    calls += 1
+
+
     # If it's the first time the function is called, let's add
     # our first two base cases: 1 and 2
     if computed_fib is None:
@@ -25,11 +30,11 @@ def fib(number, computed_fib=None):
     return nth_fib
 
 
-print(fib(6))
-# 8
-print(fib(20))
-# 6765
-print(fib(100))
-# 354224848179261915075
-print(fib(160))
-# 1226132595394188293000174702095995
+# print(fib(6))
+# # 8
+# print(fib(20))
+# # 6765
+# print(fib(100))
+# # 354224848179261915075
+# print(fib(160))
+# # 1226132595394188293000174702095995
