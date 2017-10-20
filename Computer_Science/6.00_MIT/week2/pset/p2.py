@@ -39,7 +39,7 @@ def get_minimum_payment(balance, annual_interest_rate):
 
         returns: minimum monthly payment to pay balance in 12 months
     """
-    i = 1
-    while balance_next_year(balance, annual_interest_rate, 10 * i) > 0:
-        i += 1
-    return i * 10
+    i = 10
+    while balance_next_year(balance, annual_interest_rate, i) > 0:
+        i += 10
+    return i
